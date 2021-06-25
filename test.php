@@ -94,17 +94,17 @@
                           <span class="badge badge-success"><?php echo $row['project_status']; ?></span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="http://localhost/ADMIN%20PANEL%20-%20Copy/?edit?project_id=<? php echo $row['project_id']; ?>&project_nameb=<? php echo $row['project_']; ?>&project_descb=<? php echo $row['project_desc']; ?>&project_fileb=<? php echo $row['project_fileb']; ?>&project_teamb=<? php echo $row['project_team']; ?>&project_statusb=<? php echo $row['project_status']; ?>&client_companyb=<? php echo $row['client_company']; ?>&project_leaderb=<? php echo $row['project_leader']; ?>">
+                          <a class="btn btn-primary btn-sm" href="http://localhost/admin-master/?edit?project_id=<? php echo $row['project_id']; ?>&project_nameb=<? php echo $row['project_']; ?>&project_descb=<? php echo $row['project_desc']; ?>&project_fileb=<? php echo $row['project_fileb']; ?>&project_teamb=<? php echo $row['project_team']; ?>&project_statusb=<? php echo $row['project_status']; ?>&client_companyb=<? php echo $row['client_company']; ?>&project_leaderb=<? php echo $row['project_leader']; ?>">
                               <i class="fas fa-folder">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-info btn-sm" href="http://localhost/ADMIN%20PANEL%20-%20Copy%20-%20Copy/?project_details?project_id=$row[project_id]&project_nameb=$row[project_name]&project_descb=$row[project_desc]&project_fileb=$row[project_file]&project_teamb=$row[project_team]&project_statusb=$row[project_status]&client_companyb=$row[client_company]&project_leaderb=$row[project_leader]">
+                          <a class="btn btn-info btn-sm" href="http://localhost/admin-master%20-%20Copy/?project_details?project_id=$row[project_id]&project_nameb=$row[project_name]&project_descb=$row[project_desc]&project_fileb=$row[project_file]&project_teamb=$row[project_team]&project_statusb=$row[project_status]&client_companyb=$row[client_company]&project_leaderb=$row[project_leader]">
                               <i class="fas fa-pencil-alt">
                               </i>
                               view
                           </a>
-                          <a class="btn btn-danger btn-sm" href="http://localhost/ADMIN%20PANEL%20-%20Copy%20-%20Copy/?delete?project_id=$row[project_id]">
+                          <a class="btn btn-danger btn-sm" href="http://localhost/admin-master%20-%20Copy/?delete?project_id=$row[project_id]">
                               <i class="fas fa-trash">
                               </i>
                               Delete

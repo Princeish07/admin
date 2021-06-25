@@ -54,7 +54,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
     <li class="nav-item d-none d-sm-inline-block">
-      <a class="nav-link" href="http://localhost/ADMIN%20PANEL%20-%20Copy?logout">Logout</a>
+      <a class="nav-link" href="http://localhost/admin-master?logout">Logout</a>
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -219,31 +219,31 @@
                 </a>
               </li> 
               <li class="nav-item">
-                <a href="http://localhost/ADMIN%20PANEL%20-%20Copy?projects" class="nav-link">
+                <a href="http://localhost/admin-master?projects" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Projects</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="http://localhost/ADMIN%20PANEL%20-%20Copy?add" class="nav-link">
+                <a href="http://localhost/admin-master?add" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project Add</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="http://localhost/ADMIN%20PANEL%20-%20Copy?edit" class="nav-link">
+                <a href="http://localhost/admin-master?edit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project Edit</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="http://localhost/ADMIN%20PANEL%20-%20Copy?details" class="nav-link">
+                <a href="http://localhost/admin-master?details" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Project Detail</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="http://localhost/ADMIN%20PANEL%20-%20Copy?contacts" class="nav-link">
+                <a href="http://localhost/admin-master?contacts" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Contacts</p>
                 </a>
@@ -447,7 +447,7 @@
   {
     include 'Pages/Logout.php'; 
   }       
-  else if($href=='http://localhost/ADMIN%20PANEL%20-%20Copy/') 
+  else if($href=='http://localhost/admin-master/') 
   {
     include 'Pages/Dashboard.php'; 
   }

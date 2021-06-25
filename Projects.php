@@ -94,17 +94,17 @@ if(!isset($_SESSION['email'])){
                           <span class='badge badge-success'>".$row['project_status']."</span>
                       </td>
                       <td class='project-actions text-right'>
-                          <a class='btn btn-primary btn-sm' href='http://localhost/ADMIN%20PANEL%20-%20Copy/?edit?id=$id&project_id=$row[project_id]'>
+                          <a class='btn btn-primary btn-sm' href='http://localhost/admin-master/?edit?id=$id&project_id=$row[project_id]'>
                               <i class='fas fa-folder'>
                               </i>
                               Edit
                           </a>
-                          <a class='btn btn-info btn-sm' href='http://localhost/ADMIN%20PANEL%20-%20Copy/?details?id=$id&project_id=$row[project_id]'>
+                          <a class='btn btn-info btn-sm' href='http://localhost/admin-master/?details?id=$id&project_id=$row[project_id]'>
                               <i class='fas fa-pencil-alt'>
                               </i>
                               view
                           </a>
-                          <a class='btn btn-danger btn-sm' href='http://localhost/ADMIN%20PANEL%20-%20Copy/?delete?id=$id&project_id=$row[project_id]'>
+                          <a class='btn btn-danger btn-sm' href='http://localhost/admin-master/?delete?id=$id&project_id=$row[project_id]'>
                               <i class='fas fa-trash'>
                               </i>
                               Delete

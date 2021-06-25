@@ -100,7 +100,7 @@ session_start();
           echo "ok";
           echo"$email";
           echo "$password";
-          header('location:http://localhost/ADMIN%20PANEL%20-%20Copy?projects');
+          header('location:http://localhost/admin-master?projects');
           $_SESSION['email']=$email;
         }
       else

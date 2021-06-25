@@ -10,5 +10,5 @@ $sql="DELETE FROM `project` where project_id='$project_id'";
     $result1=mysqli_query($conn,$sql1);
  }
  //Redirect to Display page
- header('location:http://localhost/ADMIN%20PANEL%20-%20Copy?projects');
+ header('location:http://localhost/admin-master?projects');
  ?>
