@@ -16,6 +16,8 @@
                     $sql1="SELECT * FROM project where project_id=$project_id";
                       $result1 = mysqli_query($conn,$sql1);
                       $row1= mysqli_fetch_array($result1);
+                      $team=$row1['project_team'];
+                      $team1=explode(",",$team);
                       
                      }
 ?> 
@@ -69,6 +71,10 @@
                  <div class="form-group">
                   <label>Project Team</label>
                   <select multiple class="custom-select" name="project_team[]" value="<?php echo $row1['project_team']; ?>" id="project_team">
+                  <?php
+                  foreach($team1 as $key=>$val){?>
+                  <option SELECTED><?php echo $val; ?></option>
+                  <?php } ?>
                     <?php
                       include 'Database/conn.php';
                       $sql="SELECT * FROM `user`";

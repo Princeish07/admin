@@ -29,7 +29,9 @@
             $project_id=$_GET['project_id'];
             $sql1="SELECT * FROM project where project_id=$project_id";
             $result1 = mysqli_query($conn,$sql1);
-            $row1= mysqli_fetch_array($result1);           
+            $row1= mysqli_fetch_array($result1); 
+            $project_file1=$row1['project_file'];
+            $project_file2=explode(",",$project_file1);          
         }
      ?> 
   <!-- Main content -->
@@ -86,16 +88,13 @@
                       <span class="username">
                         <a href="#"><?php echo $row1['project_name']; ?></a>
                       </span>
-                      <span class="description">Shared publicly -<?php echo $row1['project_desc']; ?></span>
+                      <span class="description">Shared publicly -<?php echo $row1['project_added']; ?></span>
                     </div>
                     <!-- /.user-block -->
                     <p>
                         <?php 
                          echo $row1['project_desc'];  
                         ?>
-                    </p>
-                    <p>
-                      <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
                     </p>
                   </div>
                 </div>
@@ -116,13 +115,12 @@
             <h5 class="mt-5 text-muted">Project files</h5>
             <ul class="list-unstyled">
               <li>
-                 <a href="" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i><?php echo $row1['project_file']; ?></a>
+                <?php
+                foreach($project_file2 as $key=>$val){ ?>
+                 <a href="Files/image/<?php $val; ?>" class="btn-link text-secondary"><i class="far fa-fw fa-file-word"></i><?php echo $val; ?></a></br>
+                 <?php } ?>
               </li>
             </ul>
-            <div class="text-center mt-5 mb-3">
-              <a href="#" class="btn btn-sm btn-primary">Add files</a>
-              <a href="#" class="btn btn-sm btn-warning">Report contact</a>
-            </div>
           </div>
         </div>      
       </div>  

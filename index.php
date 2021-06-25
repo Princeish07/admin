@@ -102,18 +102,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="http://localhost/admin-master?edit" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Project Edit</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="http://localhost/admin-master?details" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Project Detail</p>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="http://localhost/admin-master?contacts" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Contacts</p>
@@ -178,7 +166,7 @@
         $count++;
         move_uploaded_file($_FILES['project_file']['tmp_name'][$key],$destinationfile);
       }
-  
+      $team=implode(",",$_FILES['project_file']['name']);
       $project_team1=implode(',',$project_team);
       $sql="INSERT INTO `admin`.`project` (
       `project_name` ,
@@ -194,7 +182,7 @@
       '$project_name', 
       '$project_desc', 
       '$project_team1', 
-      '$destinationfile,$count', 
+      '$team', 
       '$project_status', 
       '$client_company', 
       '$project_leader',
@@ -248,6 +236,7 @@
       $count++;
       move_uploaded_file($_FILES['project_file']['tmp_name'][$key],$destinationfile);
     }
+    $team=implode(",",$_FILES['project_file']['name']);
     //The implode() function returns a string from elements of an array
     $project_team1=implode(',',$project_team);
     //Edit project 
@@ -255,7 +244,7 @@
     project_name = '$project_name1',
     project_desc = '$project_desc',
     project_team = '$project_team1',
-    project_file = '$destinationfile',
+    project_file = '$team',
     project_status = '$project_status',
     client_company = '$client_company',
     project_leader = '$project_leader' WHERE project_id ='$project_id'";

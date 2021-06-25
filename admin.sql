@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 25, 2021 at 07:50 AM
+-- Generation Time: Jun 25, 2021 at 01:59 PM
 -- Server version: 5.1.53
 -- PHP Version: 5.3.4
 
@@ -36,18 +36,17 @@ CREATE TABLE IF NOT EXISTS `project` (
   `project_leader` varchar(255) NOT NULL,
   `project_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`project_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `project`
 --
 
 INSERT INTO `project` (`project_id`, `project_name`, `project_desc`, `project_team`, `project_file`, `project_status`, `client_company`, `project_leader`, `project_added`) VALUES
-(1, 'First Project1', 'hi its first project1', '1,2,6', 'Files/image/images.jpg', 'Success', 'infostride1', 'rohit1', '2021-06-24 22:40:50'),
-(2, 'second project', 'hi its my second project', '1,2,6', 'Files/image/PARENT SURVEY.docx,2', 'Cancelled', 'google', 'mohan', '2021-06-24 20:37:30'),
-(3, 'third project', 'it is my third project', '2,6,4', 'Files/image/WHTSAPP.jpg,3', 'Cancelled', 'infostride', 'Prince', '2021-06-24 20:38:46'),
-(4, 'Fourth project', 'hi its my fourth project', '1,2,6,4,5', 'Files/image/wieght.jpg,4', 'Success', 'CBL', 'Mohit', '2021-06-24 20:39:51'),
-(5, 'hello', 'dd', '4,5,7', 'Files/image/images.jpg,3', 'Success', 'ggooo', 'ram', '2021-06-24 22:43:21');
+(1, 'SMART TOUR AND TRAVEL GUIDANCE APP', 'This project tour and travel guide provides the tourist with city map \r\ndepending on its current location entered by the android phone user.', '1,2', 'graduate exit survey proof.pdf,images.jpg', 'Cancelled', 'Infostride , Mohali', 'Prince', '2021-06-25 19:17:09'),
+(2, 'IMPLEMENTATION OF EIGRP', 'nhanced Interior Gateway Routing Protocol (EIGRP) is an advanced \r\ndistance vector routing protocol that is used on a computer network for \r\nautomating routing decisions and configuration. ', '1,2,6', 'bg.jpg,graduate exit survey proof.docx', 'Success', 'Google', 'Kerry', '2021-06-25 19:21:35'),
+(3, 'MPLEMENTATION OF VPN', ' A Virtual Private Network (VPN) is used for creating a private scope of \r\ncomputer communications or providing a secure extension of a private \r\nnetwork through an insecure network such as the Internet.', '5,7', 'Ishant(Resume).docx,Priyatution.docx', 'Onhold', 'TCS', 'Sahil', '2021-06-25 19:23:08'),
+(4, 'DNS AND WEB SERVER', 'DNS is the backbone of the internet. That statement is far from a precise \r\nDNS definition, but its truthfulness cannot be disputed', '1,2,6,4,5', 'bg.jpg,PARENT SURVEY.docx,WHTSAPP.jpg,why-hd.jpg,w', 'Cancelled', 'infostride,US', 'Sham', '2021-06-25 19:25:05');
 
 -- --------------------------------------------------------
 
@@ -61,18 +60,17 @@ CREATE TABLE IF NOT EXISTS `project_budget` (
   `amount_spent` int(11) NOT NULL,
   `estimated_duration` int(11) NOT NULL,
   PRIMARY KEY (`project_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `project_budget`
 --
 
 INSERT INTO `project_budget` (`project_id`, `estimated_budget`, `amount_spent`, `estimated_duration`) VALUES
-(1, 1001, 1011, 1020),
-(2, 201, 202, 202),
-(3, 301, 302, 302),
-(4, 401, 402, 402),
-(5, 1, 2, 2);
+(1, 100, 50, 20),
+(2, 200, 150, 120),
+(3, 300, 250, 219),
+(4, 400, 350, 319);
 
 -- --------------------------------------------------------
 
@@ -87,7 +85,6 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(100) NOT NULL,
   `about` varchar(100) NOT NULL,
   `address` varchar(100) NOT NULL,
-  `user_img` varchar(100) NOT NULL,
   `phone` varchar(250) NOT NULL,
   `user_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`user_id`)
@@ -97,12 +94,10 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `about`, `address`, `user_img`, `phone`, `user_added`) VALUES
-(1, 'Prince', '1234', 'princeish07@gmail.com', 'hi my name is prince', 'kurali', 'user_img/prince.jpg', '2147483647', '2021-06-17 18:34:32'),
-(2, 'Mohit', '1234', 'Rohit@gmail.com', 'hi my name is rohit', 'pathankot', 'user_img/rohit.jpg', '2147483647', '2021-06-17 18:34:32'),
-(6, 'prince', '81dc9bdb52d04dc20036dbd8313ed055', 'rahul@gmail.com', '', '', '', '', '2021-06-21 19:22:31'),
-(4, 'sham', '1234', 'sham@gmail.com', 'hi my name is sham', 'mohali', 'user_img/sham.jpg', '2147483647', '2021-06-17 18:38:36'),
-(5, 'mohan', '1234', 'mohan@gmail.com', 'hi my name is mohan', 'jalandhar', 'user_img/mohan.jpg', '9023139932', '2021-06-17 18:40:58'),
-(7, 'prince', '81dc9bdb52d04dc20036dbd8313ed055', '17bcs1987@cuchd.inn', '', '', '', '', '2021-06-21 19:31:59'),
-(8, '', 'd41d8cd98f00b204e9800998ecf8427e', '', '', '', '', '', '2021-06-22 21:03:07'),
-(9, 'Kerry', '81dc9bdb52d04dc20036dbd8313ed055', 'ram@gmail.com', '', '', '', '', '2021-06-23 14:47:21');
+INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `about`, `address`, `phone`, `user_added`) VALUES
+(1, 'Prince', '81dc9bdb52d04dc20036dbd8313ed055', 'princeish07@gmail.com', 'hi my name is prince', 'kurali', '2147483647', '2021-06-17 18:34:32'),
+(2, 'Mohit', '81dc9bdb52d04dc20036dbd8313ed055', 'Rohit@gmail.com', 'hi my name is rohit', 'pathankot', '2147483647', '2021-06-17 18:34:32'),
+(6, 'Kerry', '81dc9bdb52d04dc20036dbd8313ed055', 'rahul@gmail.com', 'hi my name is kerry', 'USA', '9023139932', '2021-06-21 19:22:31'),
+(4, 'sham', '81dc9bdb52d04dc20036dbd8313ed055', 'sham@gmail.com', 'hi my name is sham', 'mohali', '2147483647', '2021-06-17 18:38:36'),
+(5, 'mohan', '81dc9bdb52d04dc20036dbd8313ed055', 'mohan@gmail.com', 'hi my name is mohan', 'jalandhar', '9023139932', '2021-06-17 18:40:58'),
+(7, 'Sahil', '81dc9bdb52d04dc20036dbd8313ed055', '17bcs1987@cuchd.inn', 'hi my name is Sahil', 'Chandigarh', '7888232223', '2021-06-21 19:31:59');
