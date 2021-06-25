@@ -16,11 +16,11 @@
     if($emailcount>0)
     {
       echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Already Registered!</strong>Your User name is ' . $email.'
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-            </div>';
+      <strong>Already Registered!</strong>Your User name is ' . $email.'
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">×</span>
+      </button>
+      </div>';
     }
     else
     {
