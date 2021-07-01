@@ -1,6 +1,5 @@
 <?php
-session_start();
-include 'conn.php';
-  header('location:Pages/Login.php');
+include 'Database/conn.php';
 session_destroy();
+header('location:Login.php');
 ?>

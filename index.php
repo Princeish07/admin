@@ -1,6 +1,10 @@
  <?php 
  include 'Database/conn.php';
-    $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+session_start();
+if(!isset($_SESSION['email'])){
+  header('location:Pages/Login.php');
+}
+$href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     
  ?> 
 <!DOCTYPE html>
@@ -51,7 +55,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
     <li class="nav-item d-none d-sm-inline-block">
-      <a class="nav-link" href="http://localhost/admin-master?logout">Logout</a>
+      <a class="nav-link" href="Pages/Logout.php">Logout</a>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -186,10 +190,8 @@
       '$project_status', 
       '$client_company', 
       '$project_leader',
-      CURRENT_TIMESTAMP)";
-      
-      $result = mysqli_query($conn,$sql);
-      
+      CURRENT_TIMESTAMP)";  
+      $result = mysqli_query($conn,$sql); 
       if($result)
       {
         $sql1="INSERT INTO `admin`.`project_budget` (
@@ -259,9 +261,16 @@
     amount_spent= '$amount_spent',
     estimated_duration = '$estimated_duration' WHERE project_id ='$project_id'";
     $result3=mysqli_query($conn,$sql1);
-
-  }
-  
+    if($result3)
+    {
+    echo '<div class="row">
+    <div class="form-group"><div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>successfullly Registered!</strong> your proj name is ' . $project_name.'
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button></div></div></div>'; 
+    }
+  } 
   elseif(strpos($href, 'projects') !== false)
   {
     include 'Database/conn.php';
@@ -282,11 +291,11 @@
   elseif(strpos($href, 'logout') !== false)
   {
     include 'Pages/Logout.php'; 
-  }       
-  else if($href=='http://localhost/admin-master/') 
+  }    
+  elseif ($href=='http://localhost/admin-master/') 
   {
     include 'Pages/Dashboard.php'; 
-  }
+    }
   ?>
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>

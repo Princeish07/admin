@@ -1,10 +1,4 @@
-<?php
-session_start();
-include 'Database/conn.php';
-if(!isset($_SESSION['email'])){
-  header('location:Pages/Login.php');
-}
-?><!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
