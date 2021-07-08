@@ -71,10 +71,7 @@
                  <div class="form-group">
                   <label>Project Team</label>
                   <select multiple class="custom-select" name="project_team[]" value="<?php echo $row1['project_team']; ?>" id="project_team">
-                  <?php
-                  foreach($team1 as $key=>$val){?>
-                  <option SELECTED><?php echo $val; ?></option>
-                  <?php } ?>
+                  <option Hidden SELECTED>none</option>
                     <?php
                       include 'Database/conn.php';
                       $sql="SELECT * FROM `user`";

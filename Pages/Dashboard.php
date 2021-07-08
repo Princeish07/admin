@@ -1,4 +1,5 @@
 <?php 
+include 'Database/conn.php';
 if(!isset($_SESSION['email'])){
   header('location:Pages/Login.php');
 }

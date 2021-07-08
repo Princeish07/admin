@@ -4,8 +4,9 @@ session_start();
 if(!isset($_SESSION['email'])){
   header('location:Pages/Login.php');
 }
+
 $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    
+
  ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,9 +49,6 @@ $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
       <li class="nav-item d-none d-sm-inline-block">
         <a href="http://localhost/admin-master/" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="http://localhost/admin-master?contacts" class="nav-link">Contact</a>
-      </li>
     </ul>
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -74,7 +72,7 @@ $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
           <img src="dist/img/hrms1.jpeg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="" class="d-block">Prince Sharma</a>
+          <a href="" class="d-block">Prince</a>
         </div>
       </div>
       <!-- SidebarSearch Form -->
@@ -110,40 +108,6 @@ $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 <i class="far fa-circle nav-icon"></i>
                 <p>Contacts</p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon far fa-plus-square"></i>
-                <p>
-                  Extras
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>
-                      Login & Register v1
-                      <i class="fas fa-angle-left right"></i>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a href="Pages/Login.php" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Login v1</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="Pages/Register.php" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Register v1</p>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
             </li>
          </ul>
        </nav>
@@ -279,6 +243,9 @@ $href= "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   elseif(strpos($href, 'delete') !== false)
   {
     include 'Pages/General-Delete-Form.php'; 
+    include 'Projects.php'; 
+
+
   }      
   elseif(strpos($href, 'details') !== false) 
   {       

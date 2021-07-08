@@ -29,7 +29,7 @@ session_start();
 
       <form method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" name="email1" id="email" placeholder="Email">
+          <input type="email" class="form-control" name="email1" id="email" placeholder="Email" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -37,7 +37,7 @@ session_start();
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" name="password1" id="password" placeholder="Password">
+          <input type="password" class="form-control" name="password1" id="password" placeholder="Password" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -45,14 +45,6 @@ session_start();
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" name="remember" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
           <!-- /.col -->
           <div class="col-4">
             <button type="submit" name="submit" class="btn btn-primary btn-block">Sign In</button>
@@ -60,21 +52,7 @@ session_start();
           <!-- /.col -->
         </div>
       </form>
-
-      <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="https://www.facebook.com/" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="https://accounts.google.com/servicelogin" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
-      </div>
       <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-        <a href="Forgot-Password.php">I forgot my password</a>
-      </p>
       <p class="mb-0">
         <a href="Register.php" class="text-center">Register a new membership</a>
       </p>
